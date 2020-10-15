@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const App = () => {
-  return <div>app2</div>
+  return <div>developing now</div>
 }
 
 ReactDOM.render(
