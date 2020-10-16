@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Test from './ui/test';
 
 const App = () => {
-  return <div>developing now</div>
+  return <Test />
 }
 
 ReactDOM.render(
