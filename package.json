@@ -11,6 +11,8 @@
   "author": "yamakenji",
   "license": "ISC",
   "dependencies": {
+    "dotenv-webpack": "^3.0.0",
+    "firebase": "^7.24.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
