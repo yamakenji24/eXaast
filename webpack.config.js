@@ -1,4 +1,5 @@
 const Dotenv = require('dotenv-webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   // モード値を production に設定すると最適化された状態で、
@@ -17,6 +18,9 @@ module.exports = {
   
   plugins: [
     new Dotenv(),
+    new MiniCssExtractPlugin({
+      filename: 'public/index.css',
+    }),
   ],
 
   module: {
@@ -24,7 +28,11 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: "ts-loader"
-      }
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
     ]
   },
   resolve: {
