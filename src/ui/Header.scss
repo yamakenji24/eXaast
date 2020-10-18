@@ -1,0 +1,10 @@
+.header {
+  background: teal;
+  height: 48px;
+  
+  &__name {
+    position: absolute;
+    margin: 10px;
+    color: white;
+  }
+}
