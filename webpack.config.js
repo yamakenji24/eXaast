@@ -8,13 +8,14 @@ module.exports = {
   // mode: "production",
   
   // トランスパイルをおこなう対象ファイル
-  entry: "./src/index.tsx",
+  entry: `${__dirname}/src/index.tsx`,
 
   // トランスパイル後のファイルの名前、ディレクトリの指定
   output: {
-    path: `${__dirname}/public/`,
+    path: `${__dirname}/public`,
     filename: "bundle.js",
   },
+  devtool: "source-map",
   
   plugins: [
     new Dotenv(),
@@ -41,10 +42,10 @@ module.exports = {
   
   // 開発用Webサーバーの起点ディレクトリ
   devServer: {
-      contentBase: "./public",
+      contentBase: `${__dirname}/public/`,
+      historyApiFallback: true,
       hot: true,
       publicPath: "/",
-      open: true,
       port: 3000,
   },
 
