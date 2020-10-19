@@ -1,0 +1,22 @@
+.search {
+  display: flex;
+  overflow-y: visible;
+  flex-direction: column;
+  width: 250px;
+  min-width: 250px;
+  height: 100%;
+  background: #EEFFFF;
+
+  &__textBox {
+    margin: 10px 0;
+  }
+
+  &__checkaas {
+    display: block;
+  }
+
+  button {
+    margin: 10px 0;
+    width: 80%;
+  }
+}
